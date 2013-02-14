@@ -37,23 +37,20 @@ public class Data extends Activity implements View.OnClickListener {
 	}
 
 	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
+	public void onClick(View v) {		
+		
+		String message = sendET.getText().toString();
+		Bundle Envelope = new Bundle();
+		Envelope.putString("stamp", message);		
+		Intent a = new Intent(Data.this, OpenedClass.class);
+		a.putExtras(Envelope);
+		
 		switch (v.getId()) {
-		case R.id.bSA:
-			//store the input in edittext to a bundle
-			String message = sendET.getText().toString();
-			Bundle Envelope = new Bundle();
-			Envelope.putString("stamp", message);
-			
-			//start a new activity with a bundle information
-			Intent a = new Intent(Data.this, OpenedClass.class);
-			a.putExtras(Envelope);
+		case R.id.bSA:			
 			startActivity(a);
 			break;
-		case R.id.bSAFR:
-			Intent i = new Intent(Data.this, OpenedClass.class);
-			startActivityForResult(i, 0); //0 is the requestCode
+		case R.id.bSAFR:			
+			startActivityForResult(a, 0); //0 is the requestCode
 			break;
 		}
 	}
