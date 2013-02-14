@@ -24,12 +24,15 @@
         </activity>
         <activity
             android:name="com.shuji.firstapp.MainActivity"
-            android:label="@string/app_name" >
+            android:label="MainActivity" >
             <intent-filter>
                 <action android:name="com.shuji.firstapp.MAINACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
+       
+        
         <activity
             android:name="com.shuji.firstapp.Menu"
             android:label="Menu" >
@@ -64,6 +67,21 @@
             android:name="com.shuji.firstapp.Magic8Ball"
             android:label="@string/app_name" >
         </activity>
+        
+         <!--set up activities in the menu right up conner -->
+        <activity
+            android:theme="@android:style/Theme.Dialog"    
+            android:name="com.shuji.firstapp.AboutUs"
+            android:label="About Us" >
+            <intent-filter>
+                <action android:name="com.shuji.firstapp.ABOUTUS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        
+        
+        
     </application>
 
 </manifest>
