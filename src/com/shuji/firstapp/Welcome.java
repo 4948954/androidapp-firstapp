@@ -2,8 +2,10 @@ package com.shuji.firstapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 
 public class Welcome extends Activity{
 	
@@ -17,11 +19,19 @@ public class Welcome extends Activity{
 		
 		// Configure background music
 		bgSong = MediaPlayer.create(Welcome.this,R.raw.welcome_bgsong);
-		bgSong.start();
+		
+		//access the preferences to turn on/off the welcome music
+		SharedPreferences getPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+		boolean music_check = getPrefs.getBoolean("checkbox", true);
+		if(music_check == true){
+			bgSong.start();
+		}
+		
+		
 		Thread timer = new Thread(){
 			public void run(){
 				try{
-					sleep(1000);
+					sleep(3000);
 				} catch (InterruptedException e){
 					e.printStackTrace();
 				} finally{

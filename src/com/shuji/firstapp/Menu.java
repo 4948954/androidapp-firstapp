@@ -53,11 +53,15 @@ public class Menu extends ListActivity {
 		// TODO Auto-generated method stub
 		switch (item.getItemId()) {
 		case R.id.aboutUs:
-			Intent i =new Intent("com.shuji.firstapp.ABOUTUS");
+			Intent i = new Intent("com.shuji.firstapp.ABOUTUS");
 			startActivity(i);
 			break;
 		case R.id.preferences:
-			
+			Intent p = new Intent("com.shuji.firstapp.PREFS");
+			startActivity(p);
+			break;
+		case R.id.exit:
+			finish();
 			break;
 		}
 

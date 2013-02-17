@@ -78,6 +78,15 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:theme="@android:style/Theme.Dialog"    
+            android:name="com.shuji.firstapp.Prefs"
+            android:label="Preference" >
+            <intent-filter>
+                <action android:name="com.shuji.firstapp.PREFS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         
         
         
