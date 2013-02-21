@@ -7,7 +7,8 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-    <uses-permission android:name="android.permission.SET_WALLPAPER"/>
+
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
 
     <application
         android:allowBackup="true"
@@ -19,25 +20,26 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name="com.shuji.firstapp.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="MainActivity" >
             <intent-filter>
                 <action android:name="com.shuji.firstapp.MAINACTIVITY" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
-       
-        
         <activity
             android:name="com.shuji.firstapp.Menu"
             android:label="Menu" >
             <intent-filter>
                 <action android:name="com.shuji.firstapp.MENU" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -52,8 +54,7 @@
         <activity
             android:name="com.shuji.firstapp.Camera"
             android:label="Camera Application"
-            android:screenOrientation="portrait"
-             >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.shuji.firstapp.Data"
@@ -67,30 +68,28 @@
             android:name="com.shuji.firstapp.Magic8Ball"
             android:label="@string/app_name" >
         </activity>
-        
-         <!--set up activities in the menu right up conner -->
+
+        <!-- set up activities in the menu right up conner -->
         <activity
-            android:theme="@android:style/Theme.Dialog"    
             android:name="com.shuji.firstapp.AboutUs"
-            android:label="About Us" >
+            android:label="About Us"
+            android:theme="@android:style/Theme.Dialog" >
             <intent-filter>
                 <action android:name="com.shuji.firstapp.ABOUTUS" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
-            android:theme="@android:style/Theme.Dialog"    
             android:name="com.shuji.firstapp.Prefs"
-            android:label="Preference" >
+            android:label="Preference"
+            android:theme="@android:style/Theme.Dialog" >
             <intent-filter>
                 <action android:name="com.shuji.firstapp.PREFS" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        
-        
-        
-        
     </application>
 
 </manifest>
