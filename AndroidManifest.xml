@@ -68,6 +68,10 @@
             android:name="com.shuji.firstapp.Magic8Ball"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="com.shuji.firstapp.GFXSurface"
+            android:label="GFXSurface" >
+        </activity>
 
         <!-- set up activities in the menu right up conner -->
         <activity
