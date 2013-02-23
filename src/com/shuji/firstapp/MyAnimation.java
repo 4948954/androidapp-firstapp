@@ -67,11 +67,14 @@ public class MyAnimation extends Activity implements OnTouchListener {
 	public boolean onTouch(View v, MotionEvent event) {
 		// TODO Auto-generated method stub
 		if (counter == 0) {
-			x=sX = event.getX();
-			y=sY = event.getY();
-		}
-
-		if (counter >= 1) {
+			sX = event.getX();
+			sY = event.getY();
+		}else if (counter == 1) {
+			fX = event.getX();
+			fY = event.getY();
+		}else if (counter ==2){
+			sX=x;
+			sY=y;
 			fX = event.getX();
 			fY = event.getY();
 		}
@@ -79,11 +82,8 @@ public class MyAnimation extends Activity implements OnTouchListener {
 		switch (event.getAction()) {
 		case MotionEvent.ACTION_UP:
 			counter++;
-			if (counter >= 1) {
-				
-				dX=fX-sX;
-				dY=fY-sY;
-			}
+			x = event.getX();
+			y = event.getY();
 			break;
 		}
 
