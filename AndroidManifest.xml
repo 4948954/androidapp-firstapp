@@ -72,6 +72,10 @@
             android:name="com.shuji.firstapp.GFXSurface"
             android:label="GFXSurface" >
         </activity>
+        <activity
+            android:name="com.shuji.firstapp.MyAnimation"
+            android:label="GFXSurface" >
+        </activity>
 
         <!-- set up activities in the menu right up conner -->
         <activity
